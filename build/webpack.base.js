@@ -28,7 +28,7 @@ module.exports = {
             //处理less文件
             {
                 test: /\.less$/,
-                use: [MiniCssExtractPlugin.loader, "less-loader", "css-loader"],
+                use: [MiniCssExtractPlugin.loader, "css-loader", "less-loader"],
             },
             //处理vue文件
             {

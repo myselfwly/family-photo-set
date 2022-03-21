@@ -1,0 +1,11 @@
+:root {
+  --fps-page-color: #252627;
+}
+:root {
+  --fps-input-default-bcc: #1d1e1f;
+  --fps-input-default-bc: #4b4d4f;
+  --fps-input-hover-bcc: #252627;
+  --fps-input-hover-bc: #595b5e;
+  --fps-input-focus-bcc: #252627;
+  --fps-input-fouce-bc: #00957b;
+}

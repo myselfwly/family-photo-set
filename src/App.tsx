@@ -1,5 +1,5 @@
 import { defineComponent, ref } from "vue";
-
+import { RouterView } from "vue-router";
 export default defineComponent({
   name: "App",
   setup() {
@@ -7,8 +7,7 @@ export default defineComponent({
     const auther: string = "Code Wly";
     return () => (
       <>
-        <div class="app">{title.value}</div>
-        <div class="auth">auther:{auther}</div>
+        <RouterView></RouterView>
       </>
     );
   },
