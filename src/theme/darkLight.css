@@ -8,4 +8,10 @@
   --fps-input-hover-bc: #595b5e;
   --fps-input-focus-bcc: #252627;
   --fps-input-fouce-bc: #00957b;
+  --fps-message-bcc: #1d1e1f6a;
+  --fps-message-fc: #00957b;
+  --fps-message-errfc: #ff4d4f;
+  --fps-message-sucfc:#52c41a;
+  --fps-message-warfc: #faad14;
+  --fps-message-inffc: #1890ff;
 }

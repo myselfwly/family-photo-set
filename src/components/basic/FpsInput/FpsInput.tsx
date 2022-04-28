@@ -5,13 +5,19 @@ import { fpsClass } from "..";
 const FpsInput = defineComponent({
   name: "FpsInput",
   props: {
-    ...inputProps,
+    ...inputProps(),
     fpsClass,
   },
+  emits: ["change"],
   setup(props, { slots, emit }) {
     return () => (
       <div class={`fps fps-input${props.fpsClass ? " " + props.fpsClass : ""}`}>
-        <Input {...props}></Input>
+        <Input
+          {...props}
+          onChange={(e) => {
+            emit("change", e);
+          }}
+        ></Input>
       </div>
     );
   },

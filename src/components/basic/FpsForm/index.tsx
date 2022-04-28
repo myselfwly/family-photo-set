@@ -3,14 +3,15 @@ import { Form, FormItem } from "ant-design-vue";
 import { formProps } from "ant-design-vue/lib/form/Form";
 import { formItemProps } from "ant-design-vue/lib/form/FormItem";
 import { fpsClass } from "..";
+import "./index.less";
 const FpsForm = defineComponent({
   name: "FpsForm",
-  props: { ...formProps, fpsClass },
+  props: { ...formProps(), fpsClass },
   emits: [],
   setup(props, { emit, slots, expose }) {
     return () => (
       <Form
-        class={`fps fps-input${props.fpsClass ? " " + props.fpsClass : ""}`}
+        class={`fps fps-form${props.fpsClass ? " " + props.fpsClass : ""}`}
         {...props}
       >
         {slots}
@@ -22,12 +23,12 @@ const FpsForm = defineComponent({
 const FpsFormItem = defineComponent({
   props: {
     fpsClass,
-    ...formItemProps,
+    ...formItemProps(),
   },
   setup(props, { slots }) {
     return () => (
       <FormItem
-        class={`fps fps-input${props.fpsClass ? " " + props.fpsClass : ""}`}
+        class={`fps fps-formitem${props.fpsClass ? " " + props.fpsClass : ""}`}
         {...props}
       >
         {slots}
@@ -37,7 +38,8 @@ const FpsFormItem = defineComponent({
 });
 
 interface LabelCol {
-  span: number;
+  span?: number;
+  offset?: number;
 }
 interface WrapperCol extends LabelCol {}
 FpsForm.FormItem = FpsFormItem;
